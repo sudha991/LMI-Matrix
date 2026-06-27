@@ -162,7 +162,7 @@ The system generates:
 ## Dashboard
 
 
-<img src="./frontend/screenshots/Home.png" width="100%">
+<img src="./frontend/screenshots/home.png" width="100%">
 
 ---
 
