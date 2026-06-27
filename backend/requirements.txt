@@ -1,0 +1,6 @@
+pdfplumber
+pandas
+openpyxl
+flask
+pyodbc
+spacy

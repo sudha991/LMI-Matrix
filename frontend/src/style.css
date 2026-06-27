@@ -1,0 +1,669 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+ 
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 4em;
+  padding: 5pxem;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.vanilla:hover {
+  filter: drop-shadow(0 0 2em #f7df1eaa);
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  padding: 10px 20px;
+  box-sizing: border-box;
+
+  background-color: #1565b2;
+  color: white;
+
+  overflow: hidden; /* 🔥 prevents scroll */
+}
+.header-left {
+  display: flex;
+  align-items: center;   /* 🔥 vertical alignment */
+  gap: 10px;             /* space between logo & text */
+}
+
+.logo {
+  height: 50px;
+}
+
+
+.header-center {
+  flex: 1;
+  text-align: center;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.header-right {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.title {
+  font-size: 18px;
+  margin: 0;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media (max-width: 600px) {
+  .title {
+    font-size: 14px;
+  }
+
+  .logo {
+    height: 30px;
+  }
+
+  .login-btn {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}
+.subtitle {
+  margin: 0;
+  font-size: 12px;
+  opacity: 0.8;
+}
+.title {
+    font-size: 26px;
+    color: white;
+  }
+  /* Container */
+.table-container {
+  max-height: 500px;
+  overflow: auto;
+  margin-top: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+/* Table */
+.modern-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Header */
+.modern-table thead {
+  position: sticky;
+  /*top: 70px;  adjust based on header height */
+  
+  z-index: 2;
+}
+
+.modern-table th {
+  padding: 12px;
+  text-align: left;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  background: #1f2937;
+  color: white;
+}
+
+/* Body */
+.modern-table td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  font-size: 13px;
+}
+
+/* Zebra rows */
+.modern-table tbody tr:nth-child(even) {
+  background: #f9fafb;
+}
+
+/* Hover effect */
+.modern-table tbody tr:hover {
+  background: #eef2ff;
+  transition: 0.2s;
+}
+
+/* File name highlight */
+.file-name {
+  font-weight: 500;
+  color: #1d4ed8;
+}
+
+/* No data */
+.no-data {
+  text-align: center;
+  padding: 20px;
+  color: gray;
+}
+/* =========================
+   TABLE CONTAINER
+========================= */
+.table-container {
+  margin-top: 20px;
+  overflow: auto;
+  max-height: 70vh;
+  border: 1px solid #ccc;
+}
+
+/* =========================
+   TABLE BASE
+========================= */
+.modern-table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 1200px;
+}
+
+/* =========================
+   HEADER (STICKY)
+========================= */
+.th-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  background: #f8f9fa;
+  border-bottom: 2px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Highlight selected department column */
+.th-highlight {
+  background: #ffd966 !important;
+}
+
+/* =========================
+   CELLS
+========================= */
+.td-highlight {
+  background: #fff3cd;
+}
+
+/* =========================
+   ROWS
+========================= */
+.modern-table td,
+.modern-table th {
+  padding: 6px;
+  text-align: left;
+}
+
+/* Optional hover effect */
+.modern-table tbody tr:hover {
+  background: #f5f5f5;
+}
+
+/* =========================
+   PAGINATION
+========================= */
+.pagination {
+  margin-top: 20px;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+/* =========================
+   FILTER BAR CONTAINER
+========================= */
+/* =========================
+   FILTER BAR LAYOUT
+========================= */
+.filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* 🔥 split left & right */
+  gap: 10px;
+  margin-top: 20px;
+  padding: 10px 12px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  flex-wrap: wrap;
+}
+
+/* LEFT GROUP (dropdowns) */
+.filter-left {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* RIGHT GROUP (search) */
+.filter-right {
+  display: flex;
+  align-items: center;
+}
+
+/* =========================
+   INPUTS
+========================= */
+.filter-input,
+.filter-select {
+  padding: 9px;              /* 🔥 smaller */
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 13px;
+  outline: none;
+  transition: 0.2s;
+}
+
+/* smaller search */
+.filter-search {
+  width: 500px;                 /* 🔥 reduced size */
+}
+
+/* focus */
+.filter-input:focus,
+.filter-select:focus {
+  border-color: #4dabf7;
+  box-shadow: 0 0 4px rgba(77,171,247,0.4);
+}
+
+/* =========================
+   BUTTON
+========================= */
+.btn-clear {
+  padding: 6px 10px;
+  font-size: 13px;
+  border: none;
+  border-radius: 6px;
+  background: #e9ecef;
+  cursor: pointer;
+}
+
+.btn-clear:hover {
+  background: #dee2e6;
+}
+/* =========================
+   ROW HIGHLIGHT
+========================= */
+.row-selected {
+  background-color: #d0ebff !important;
+}
+
+/* =========================
+   MODAL
+========================= */
+.pdf-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+
+/* overlay */
+.pdf-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+/* container */
+.pdf-container {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* header */
+.pdf-header {
+  padding: 10px;
+  background: #f1f3f5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+}
+
+/* close button */
+.pdf-header button {
+  border: none;
+  background: red;
+  color: white;
+  padding: 4px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+/* =========================
+   TABLE BASE
+========================= */
+.modern-table {
+  width: 100%;
+  border-collapse: collapse;   /* 🔥 important for single-line borders */
+  font-size: 14px;
+}
+
+/* =========================
+   HEADER
+========================= */
+.modern-table th {
+  border: 1px solid #dcdcdc;
+  padding: 8px;
+  background: #f8f9fa;
+  text-align: left;
+  font-weight: 600;
+}
+
+/* =========================
+   BODY CELLS
+========================= */
+.modern-table td {
+  border: 1px solid #e0e0e0;   /* 🔥 column + row lines */
+  padding: 6px 8px;
+}
+
+/* =========================
+   ROW HOVER
+========================= */
+.modern-table tbody tr:hover {
+  background-color: #f1f7ff;
+}
+
+/* =========================
+   SELECTED ROW
+
+.row-selected {
+  background-color: #d0ebff !important;
+}
+========================= */
+/* =========================
+   STICKY HEADER FIX
+========================= */
+.modern-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: #1e1f20;
+}
+
+/* =========================
+   COLUMN HIGHLIGHT
+========================= */
+.th-highlight,
+.td-highlight {
+  background-color: #fff3cd;
+  border-left: 3px solid #ffc107;
+}
+
+/* =========================
+   CLICKABLE LINK STYLE
+========================= */
+.link {
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* =========================
+   TABLE CONTAINER
+========================= */
+.table-container {
+  margin-top: 20px;
+  max-height: 70vh;
+  overflow: auto;
+  border: 1px solid #ccc;
+}
+/* TABLE BASE */
+.modern-table {
+  border-collapse: separate;   /* ❗ IMPORTANT */
+  border-spacing: 0;
+}
+
+/* HEADER */
+.th-sticky {
+  position: sticky;
+  top: 0;
+  background: #f1f3f5;
+  z-index: 10;
+}
+
+/* FIRST COLUMN (S NO) 
+.first-col {
+  position: sticky;
+  left: 0;
+  background: #ffffff;
+  z-index: 9;
+  min-width: 70px;
+}
+*/
+/* SECOND COLUMN (FILE NAME) 
+.second-col {
+  position: sticky;
+  left: 70px;  
+  background: #ffffff;
+  z-index: 8;
+  min-width: 200px;
+}
+*/
+/* FIX OVERLAP ISSUE */
+.first-col,
+.second-col {
+  box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+}
+
+/* OPTIONAL: prevent text wrap */
+.modern-table th,
+.modern-table td {
+  white-space: nowrap;
+}
+/* SIMPLE FILTER BAR */
+.filter-bar-simple {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+/* SEARCH */
+.search-input {
+  padding: 6px 10px;
+  width: 180px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* DROPDOWNS */
+.filter-select {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: white;
+}
+
+/* CLEAR BUTTON */
+.btn-clear {
+  padding: 6px 12px;
+  border: none;
+  background: #dc3545;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-clear:hover {
+  background: #c82333;
+}
+.btn-export {
+  margin-left: 10px;
+  padding: 6px 12px;
+  border: none;
+  background: #28a745;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-export:hover {
+  background: #218838;
+}
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.pagination button {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.pagination button:hover {
+  background: #f1f1f1;
+}
+
+/* 🔥 Active page highlight */
+.pagination .active-page {
+  background: #007bff;
+  color: white;
+  font-weight: bold;
+  border-color: #007bff;
+}
+
+/* Disabled state */
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.login-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.login-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 10;
+  width: 300px;
+}
+.login-btn, .logout-btn {
+  padding: 6px 10px;
+  font-size: 14px;
+  white-space: nowrap;
+}
